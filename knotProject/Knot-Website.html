@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS1.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo" onclick="scrollToTop()"></div>
+        <h1>Historic Knot Facts</h1>
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+            <div id="overlay-image"></div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Your website content goes here -->
+        
+        <div id="image-container">
+            <img src="https://t3.ftcdn.net/jpg/03/17/69/74/360_F_317697427_ZHk7xBOC6QcIGc5NvbL6RDCw91DCjBH8.jpg" alt="Knot Image">
+        </div>
+
+        <!-- Black block with text -->
+        <div class="historicImage-container">
+
+            <div class="historicImage-info" id="black-block">
+                <p>The humble knot that we have known ever sense we could tie our shoes has a surprisingly long history, dating back at least 15,000 years. Initial indications point to the use of rudimentary knots for securing tools and constructing shelters. As civilizations advanced, more sophisticated knotting techniques emerged, aiding in endeavors like fishing, navigation, and information recording. Despite ongoing debates about the precise knot types and their cultural meanings, the prehistoric narrative of knots unveils a captivating tale of human creativity and technological evolution spanning millennia.</p>
+            </div>
+
+            <div class="historicImage">
+                <img src="https://www.peruforless.com/blog/wp-content/uploads/2020/11/quipu-illustration.jpg" alt="Image" class="rounded-image">
+            </div>
+
+        </div>
+        <h2>Fun facts</h2>
+        <div id="cardGroupContainer">
+            <div class="cardGroup">
+
+                <div class="littleCard card">
+                    
+                </div>
+
+                <div class="bigCard card"> 
+                    Some scientists have speculated that the first knotters were animals, gorillas who tied simple “granny knots,” interlacing branches to construct nests. - New York Times, In Praise of the Humble Knot                  
+                    <img src="https://seaworld.org/-/media/seaworld-dotorg/images/infobooks/gorillas/section-content/physical-characteristics/pic-sea-gorilla-pc-03.ashx?hash=401F7B51070154BC28305515742E090880144BCC&version=1_201812033535&h=300&w=381&la=en">
+                </div>
+
+                <div class="littleCard card">
+                   
+                </div>
+
+                <div class="bigCard card">
+                    The hagfish is known to strip slime from its skin by tying itself into a simple overhand knot, and moving its body to make the knot travel toward the tail. It also uses this action in reverse (tail to head) to pry out flesh after biting into a carcass.
+                    <img src="data:image/jpeg;base64,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">
+                </div>
+
+                <div class="littleCard card">
+                    
+                </div>
+
+                <div class="bigCard card">
+                    Knot-tying has been around since early human history. We began creating tools with rope. The creation of knots predates other simple tools like axes and the wheel. Some historians think knot-tying may even predate the discovery of fire. 
+                    <img src="https://i.pinimg.com/474x/93/a0/0a/93a00ab63e9f5b98bde17f82b661d86c.jpg">
+                </div>
+
+                <div class="littleCard card">
+                    
+                </div>
+
+                <div class="bigCard card">
+                    The oldest fossil records of ropes are from 13,000 BC, about 15,000-17,000 years ago. Historians believe ancient peoples used knots long before that, but that we don’t have a record of it.
+                    <img src="https://p-news-upload.storage.googleapis.com/2023/10/Figure-4.jpg">
+                </div>
+
+            </div>
+        </div>
+    <div id="finallyTheEnd">
+            <!-- Summary of Knot Theory -->
+        <section id="knot-theory-section">
+            <h2>Summary of Knot Theory</h2>
+            <div class="description-content">
+                <p>Synopsis of Algorithm: Knot theory is the branch of mathematics that studies geometric knots. Alan Turing thought the “Knot Equivalence Problem” probably undecidable”. Wolfgang Haken created a computer algorithm in 1961 that can determine if any closed shape is a knot or not, but for large shapes can take up to the heat death of the universe to calculate. Other identifiers of knots include p-colorability and Dowker-Thistlethwaite algorithmic notation, and while the identifiers are not mutually exclusive, for 10 crossing knots and lower they can be used for the knot equivalence problem.
+                </p>
+            </div>
+        </section>
+
+        <!-- Description of Hawkins Algorithm -->
+        <section id="hawkins-algorithm-section">
+            <h2>How to run Haken's algrothm/Dowker-Thistlethwait algorithmic notation</h2>
+            <div class="description-content">
+                <p>
+                    Visit <a href="https://snappy.computop.org/installing.html#windows" target="_blank">snappy.py</a> and click on InstallSnapPy.exe or run
+A second option is to use the command "pip install snappy" in your terminal and run the "snappy --infile test_data/TGP_chrY --out test_SNAPPY" command to launch the application
+To create a knot in SnapPy, type the command M = Manifold() and it will open up the Plink interface. To draw a knot, click on the screen and click to a different spot to draw a line. To create an alternating crossing, go to tools and click reflect to pass a line under another. For example, cross over the lines you made once, and then before you draw the second crossing, click reflect to create a simple knot. Once you create a closed shape, click tools and then click send to SnapPy.
+Return to the terminal and run the command M.DT_code(). Once the command is run, click file and save as, and save the file and name the file myManifold into your downloads folder.
+Visit <a href="https://github.com/hidethecyanide/Knot-Exequivalence-project.git" target="_blank">our GitHub</a> and download blah and run the file on your computer.
+                  </p>
+            </div>
+        </section>
+    </div>
+
+       
+    </main>
+    <script src="JS1.js"></script>
+    
+</body>
+
+</html>
+

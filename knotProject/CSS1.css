@@ -1,0 +1,276 @@
+body {
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif;
+    background-color: #6b4618; 
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    font-family: 'Jura', sans-serif;
+    padding: 20px; /* Adjust padding as needed */
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    transition: background-color 0.3s, padding 0.3s;
+    z-index: 2;
+}
+
+header.shrink {
+    background-color: #000000; /* Adjust as needed */
+    padding: 45px; /* Adjust as needed */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    transition: opacity 0.3s;
+}
+
+header.shrink h1 {
+    opacity: 0;
+}
+
+header .logo {
+    cursor: pointer;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: #4CAF50;
+    transition: width 0.3s;
+}
+
+#overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('newHead.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+header.shrink #overlay-image {
+    opacity: 1;
+}
+
+main {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#image-container {
+    text-align: center;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+#image-container img {
+    min-width: 55%;
+    /*height: auto;*/
+    padding-top: 5%;
+}
+
+.black-block {
+    width: 55%;
+    background-color: #000;
+    margin-left: 10%; 
+    color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    margin-top: -4px;
+}
+
+ p {
+    width: 100%; /* Set the width to 100% to fill the entire black-block */
+    font-size: xx-large;
+    margin: 0;   /* Remove default margin */
+}
+
+.historicImage img {
+    width: 55%; /* Set width to 25% of the viewport width */
+
+    border-radius: 15px; /* Rounded corners */
+}
+
+.historicImage-container {
+    display: flex; /* Use flexbox to arrange the elements in a row */
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.historicImage {
+    margin-left: auto;
+    width: 35%;
+    height:auto; 
+    overflow: hidden; /* Ensure rounded corners don't get cut off */
+}
+
+.rounded-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.historicImage-info {
+    background-color: #000;
+    color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    margin-top: -4px;
+    opacity: 1;
+    transition: opacity 0.3s;
+    width: 45vw; /* Set width to 75% of the viewport width */
+    left: 0;
+    top: 0;
+}
+
+.historicImage-info.show {
+    opacity: 1;
+}
+
+#cardGroupContainer {
+    background-color: black;
+    min-height: 750px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+    padding-top: 10%;
+}
+
+.cardGroup, .card{
+    aspect-ratio: 5 / 7;;
+}
+
+.cardGroup, .bigCard{
+    width: 30vmin;
+}
+
+.card{
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    position:absolute; 
+    transition: transform 800ms cubic-bezier(.05, .43,.25.95);
+}
+
+.bigCard{
+   width: 30vmin;
+    border-radius: 1vmin;
+}
+
+.bigCard img {
+    max-width: 100%; /* Make the image fit the width of the card */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Remove any extra spacing below the image */
+    margin: 0 auto; /* Center the image within the card */
+}
+
+.littleCard{
+   width: 12vmin;
+   background-color: none; 
+   font-size: xx-small;
+   border-radius: 2vmin;
+   left: 50%;
+   right: 50%;
+   transform: translate(-70%,70%);
+}
+
+.bigCard:nth-child(2){
+    background-color: #4CAF50;
+    transform: translateX(-20%) rotate(-5deg);
+}
+
+.bigCard:nth-child(4){
+    background-color: aqua;
+    transform: rotate(2deg);
+}
+
+.bigCard:nth-child(6){
+    background-color: pink;
+    transform: translateX(-6%) rotate(-3deg);
+}
+
+.bigCard:nth-child(8){
+    background-color: coral;
+    transform: translate(-10%, 0%) rotate(5deg);
+}
+
+.cardGroup:hover > .bigCard:nth-child(2){
+    transform: translate(-200%, 20%) rotate(-24deg);
+}
+
+.cardGroup:hover > .bigCard:nth-child(4){
+    transform: translate(-55%,8%) rotate(-8deg);
+}
+
+.cardGroup:hover > .bigCard:nth-child(6){
+    
+    transform: translate(55%,8%) rotate(-8deg);
+}
+
+.cardGroup:hover > .bigCard:nth-child(8){
+    
+    transform: translate(200%,-10%) rotate(24deg);
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: xx-large; /* Adjust the font size as needed */
+}
+
+h2 {
+    color: white; /* Set the text color to white */
+    text-align: center; /* Center-align the text */
+    font-size: large; /* Set the text size to large */
+}
+
+.description-content {
+    color: white; /* Set the text color to white */
+    margin-bottom: 20px; /* Add margin for better spacing */
+    
+}
+
+#finallyTheEnd{
+    background-color: #000;
+    border-radius: 15px;
+    padding: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/*
+.cardGroup:hover > .littleCard:nth-child(1){
+    background-color: #4CAF50;
+    font-size: xx-small;
+    transform: translate(-600%,-50%) rotate(-15deg);
+}
+
+.cardGroup:hover > .littleCard:nth-child(3){
+    background-color: aqua;
+    font-size: xx-small;
+    transform: translate(-200%,250%) rotate(15deg);
+}
+
+.cardGroup:hover > .littleCard:nth-child(5){
+    background-color: pink;
+    font-size: xx-small;
+    transform: translate(280%,250%) rotate(15deg);
+}
+
+.cardGroup:hover > .littleCard:nth-child(7){
+    background-color: coral;
+    font-size: xx-small;
+    transform: translate(370%,120%) rotate(-15deg);
+}*/
