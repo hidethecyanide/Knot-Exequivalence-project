@@ -5,6 +5,6 @@ A second option is to use the command "pip install snappy" in your terminal and 
 To create a knot in snapPy, type the command M = Manifold() and it will open up the Plink interface
 To draw a knot, click on the screen and click to a different spot to draw a line. To create an alternating crossing, go to tools and click reflect to pass a line under another. For example, cross over the lines you made once, and then before you draw the second crossing, click reflect to create a simple knot. Once you create a closed shape, click tools and then click send to SnapPy.
 
-Return to the terminal and run the command M.DT_code(). Once the command is run, click file and save as, and save the file into your downloads folder.
+Return to the terminal and run the command M.DT_code(). Once the command is run, click file and save as, and save the file and name the file myManifold into your downloads folder.
 
-Visit https://github.com/hidethecyanide/Knot-Exequivalence-project.git and download CHeck_if_Equal.py and run the file on your computer. 
+Visit https://github.com/hidethecyanide/Knot-Exequivalence-project.git and download blah and run the file on your computer. 
