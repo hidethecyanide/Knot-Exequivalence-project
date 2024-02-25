@@ -2,8 +2,8 @@
 predefined_objects = {
     'Unknot': ['[()]'],
     'Trefoil knot': ['[(4, 6, 2)]', '[(-4, -6, -2)]'],
-    'Figure-eight knot': ['[(6, 8, 2, 4)]', '[(-6, -8, -2, -4)]', ],
-    'Cinquefoil': ['[(6, 8, 10, 2, 4)]', '[(-6, -8, -10, -2, -4)]'],
+    'Figure-eight knot': ['[(6, 8, 2, 4)]', '[(-6, -8, -2, -4)]'],
+    'Cinquefoil knot': ['[(6, 8, 10, 2, 4)]', '[(-6, -8, -10, -2, -4)]'],
     'Three-twist knot': ['[(6, 10, 8, 2, 4)]', '[(-6, -10, -8, -2, -4)]'],
     'Stevedore knot': ['[(8, 12, 10, 2, 6, 4)]', '[(-8, -12, -10, -2, -6, -4)]'],
     '6-2 knot': ['[(8, 10, 2, 12, 4, 6)]', '[(-8, -10, -2, -12, -4, -6)]'],
@@ -11,26 +11,24 @@ predefined_objects = {
 }
 
 # Open the text file in read mode
-file_path = 'Downloads/your_text_file.txt'
+file_path = "C:\\Users\\User\\Downloads\\myManifold.py"
 
 try:
     with open(file_path, 'r') as file:
-        # Read a line from the text file
-        line_from_file = file.readline().strip()
+        # Read all lines from the text file
+        all_lines = file.readlines()
 
-        # Check if the line starts with #[ and remove the #
-        if line_from_file.startswith('#['):
-            line_from_file = line_from_file[1:]  # Remove the # at the beginning
+        # Check each line for pre-defined objects
+        for line_number, line_from_file in enumerate(all_lines, start=1):
+            line_from_file = line_from_file.strip()
 
             # Check if the line matches any pre-defined object
             for object_name, definitions in predefined_objects.items():
-                if line_from_file == object_name:
-                    print(f"Object: {object_name}")
-                    for definition in definitions:
-                        print(f"  - {definition}")
-                    break
-            else:
-                print(f"The line '{line_from_file}' does not match any pre-defined object.")
+                for definition in definitions:
+                    if definition in line_from_file:
+                        print(f"your knot is a {object_name}")
+                        print()  # Add a blank line for better readability
+                        break
 
 except FileNotFoundError:
     print(f"File not found: {file_path}")
